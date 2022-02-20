@@ -1,0 +1,7 @@
+Sub variable_usage()
+
+Range("a1:a5").Value = "heckle"
+Var = "Tammy"
+Range("b1:c5").Value = Var
+
+End Sub
