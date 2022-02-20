@@ -1,0 +1,98 @@
+'#63 IF STATEMENT
+Sub if_state()
+
+If Range("a2").Value >= 35 Then
+    Range("c2").Value = "Pass"
+End If
+
+End Sub
+
+
+'#64 IF STATEMENT
+Sub if_state()
+
+If Range("a2").Value >= 35 Then
+    Range("c2").Value = "Pass"
+Else
+    Range("c2").Value = "Fail"
+End If
+
+End Sub
+
+
+''#65 ElSE_IF STATEMENT
+Sub if_state3()
+
+If Range("a2").Value <= 35 Then
+        Range("c2").Value = "Pass"
+ElseIf Range("a2").Value <= 60 Then
+        Range("c2").Value = "C"
+ElseIf Range("a2").Value <= 80 Then
+        Range("c2").Value = "B"
+Else
+        Range("c2").Value = "A"
+End If
+
+End Sub
+
+
+''#66 IF_ELSIF
+Sub if_state3()
+
+If Range("a3").Value >= 0 And Range("a3") < 35 Then
+        Range("c3").Value = "Fail"
+ElseIf Range("a3").Value >= 35 And Range("a3") < 60 Then
+        Range("c3").Value = "C"
+ElseIf Range("a3").Value >= 60 And Range("a3") < 80 Then
+        Range("c3").Value = "B"
+ElseIf Range("a3").Value >= 80 And Range("a3") < 100 Then
+        Range("c3").Value = "A"
+Else
+        Range("c3").Value = "Invalid"
+End If
+
+End Sub
+
+
+'#67 IF_ELSE FOR
+Sub ifelse_for()
+
+Dim x As Integer
+For x = 2 To 20
+    If Cells(x, 2).Value >= 35 Then
+        Cells(x, 3).Value = "Pass"
+        Cells(x, 3).Interior.Color = vbGreen
+    Else
+        Cells(x, 3).Value = "Fail"
+        Cells(x, 3).Interior.Color = vbRed
+    End If
+Next
+
+End Sub
+
+
+'#68 CASE STATEMENT
+Sub SC_St()
+
+Dim v1 As Integer
+v1 = InputBox("Enter Month Number")
+
+Select Case v1
+        Case 1:  MsgBox "January"
+        Case 2:  MsgBox "February"
+        Case 3:  MsgBox "March"
+        Case 4:  MsgBox "April"
+        Case 5:  MsgBox "May"
+        Case 6:  MsgBox "June"
+        Case 7:  MsgBox "July"
+        Case 8:  MsgBox "August"
+        Case 9:  MsgBox "September"
+        Case 10: MsgBox "October"
+        Case 11: MsgBox "November"
+        Case 12: MsgBox "December"
+        
+        Case Else
+                 MsgBox "Invalid Month"
+End Select
+
+End Sub
