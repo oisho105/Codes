@@ -1,3 +1,14 @@
+'#46 SAVE FILENAME
 Sub workbook()
 Workbooks.Add.SaveAs Filename:="C:\Users\User\Downloads\Excel VBA Tutorial\New.xlsx"
+End Sub
+
+
+'# 54 SHEET NAME
+Sub Sheet_name()
+
+For x = 1 To ThisWorkbook.Sheets.Count 'no. of sheets
+	MsgBox ThisWorkbook.Sheets(x).Name
+Next
+
 End Sub
