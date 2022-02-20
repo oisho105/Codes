@@ -1,0 +1,25 @@
+#56 DO WHILE
+Sub dowhile()
+
+Dim i As Integer
+i = 1
+Do While Cells(i, 1).Value <> "" '<> not equal
+    Cells(i, 2).Value = Cells(i, 1).Value + 10
+    i = i + 1
+Loop
+
+End Sub
+
+
+'#56 DO UNTIL
+Sub dountil()
+
+Dim i As Integer
+i = 10
+'until condtions r simple, while's complex
+Do Until i < 4
+    Cells(i, 1).Value = i
+    i = i - 1
+Loop
+
+End Sub
