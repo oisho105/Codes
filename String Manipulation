@@ -1,0 +1,46 @@
+'#75 ROW/COLUMN COUNT
+Sub RC_Count()
+
+Dim x, y As Long 'Integer can't have capacity
+x = Rows.Count  'inputting func' value at x
+y = Columns.Count
+MsgBox x
+MsgBox y
+
+End Sub
+
+
+'#76 LEFT/RIGHT STRING
+Sub LR_String()
+
+Dim x, y As Integer
+For x = 2 To 8
+    Cells(x, 2).Value = Left(Cells(x, 1).Value, 2)
+    Cells(x, 3).Value = Right(Cells(x, 1).Value, 4)
+                        'fnc(strng, position)
+Next
+
+End Sub
+
+
+'#77 UP/LOW CASE
+Sub UpLow()
+
+Dim x As Integer
+For x = 2 To 10
+    Cells(x, 2).Value = UCase(Cells(x, 1).Value)
+    Cells(x, 3).Value = LCase(Cells(x, 1).Value)
+Next
+
+End Sub
+
+
+'#78 STRING REVERSE
+Sub Str_Rev()
+
+Dim x As Integer
+For x = 2 To 10
+    Cells(x, 2).Value = StrReverse(Cells(x, 1).Value)
+Next
+
+End Sub
