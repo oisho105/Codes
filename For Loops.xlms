@@ -1,0 +1,44 @@
+'#49 FOR LOOP
+Sub For_loop()
+					'Declare In Memory
+Dim x As Integer 	'declaring variable	
+For x = 1 To 10 step 2	
+	MsgBox 25
+Next 
+
+End Sub
+
+
+'#50 FOR LOOP 2
+Sub For_loop2()
+
+Dim x As Integer	
+For x = 1 To 10	'step 2
+	cells(1,x).value = 10  'cell(r,c)
+Next 
+
+End Sub
+
+
+'#51 FOR LOOP 3
+Sub For_loop3()
+
+Dim x As Integer	
+For x = 1 To 56
+	cells(x,1).value = x
+	cells(x,1).Font.ColorIndex = 56-x 
+	cells(x,2).Interior.ColorIndex = x
+Next 
+
+End Sub
+
+
+'# 52 FOR LOOP 4
+Sub For_loop4()
+
+Dim x As Integer	
+For x = 20 To 1	step -1
+	cells(x,1).Value = x
+Next 
+
+End Sub
