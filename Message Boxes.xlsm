@@ -1,0 +1,45 @@
+'#69 MESSAGE BOX
+Sub msgbox1()
+
+'MsgBox "Welcome"
+MsgBox ("Welcome")  'so, giving () is optional
+MsgBox (100)
+MsgBox #10/12/2020# 'or(#Date#)
+
+End Sub
+
+
+'#70 MESSAGE BOX2
+Sub msgbox2()
+
+MsgBox "Welcome", 1 'Ok/Cancel
+MsgBox "Welcome", 2 'abort/retry/ignore
+MsgBox "Welcome", 3 'Yes/No/Cancel
+MsgBox "Welcome", 4 'Yes/No
+MsgBox "Welcome", 5 'Retry/Cancel
+MsgBox "Welcome", 6 'Ok
+MsgBox "Welcome", 7 '(null)
+
+End Sub
+
+
+'#70 MESSAGE BOX2_3
+Sub msgbox23()
+
+MsgBox "Welcome", vbOKOnly
+MsgBox "Not ok", vbRetryCancel
+MsgBox "Error", vbCritical
+' in this way, there're many
+
+End Sub
+
+
+'#74 INPUT BOX
+Sub inputbox1()
+
+'a = InputBox("Enter the Data")
+a = InputBox("Enter", "Excel VBA", "Hello", 200, 200)
+            'prompt,  title, default-txt, x-pos, y-pos)
+MsgBox (a)
+
+End Sub
