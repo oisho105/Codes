@@ -1,0 +1,50 @@
+'#86 1D ARRAY STATIC
+Sub StaticArr1D()
+
+Dim marks(3) As Integer
+    'An array, 4 Int' long
+marks(0) = 10
+marks(1) = 20
+marks(2) = 30
+marks(3) = 40
+
+For i = 0 To 3
+    Debug.Print marks(i)
+Next
+
+End Sub
+
+
+'#87 2D ARRAY STATIC
+Sub StcArr2D()
+
+Dim i, j As Integer
+Dim a(2, 2) As Integer
+
+a(0, 0) = 10: a(0, 1) = 20: a(0, 2) = 30
+a(1, 0) = 40: a(1, 1) = 50: a(1, 2) = 60
+a(2, 0) = 70: a(2, 1) = 80: a(2, 2) = 90
+    ': used for multi-statement line
+    
+For i = 0 To 2
+    For j = 0 To 2
+        Debug.Print a(i, j)
+    Next
+Next
+
+End Sub
+
+
+'#88 DYNAMIC ARRAY
+Sub DynArr2D()
+
+Dim a() As Integer 'no array length defined
+ReDim a(2)      're-dimension the array
+    'of don't redim there'll be runtime Err'
+a(0) = 10: a(1) = 20: a(2) = 30:
+
+For i = 0 To 2
+    Debug.Print a(i)
+Next
+
+End Sub
