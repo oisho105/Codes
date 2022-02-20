@@ -1,0 +1,75 @@
+'#80 DATE ADD
+Sub DateAdd1()
+
+Dim laterDate As Date   'declaring date var'
+mydate = #11/20/2018#   'declaring date var'
+
+MsgBox mydate
+
+'adding days, months, & years
+MsgBox DateAdd("yyyy", 1, mydate)
+MsgBox DateAdd("m", 1, mydate)
+MsgBox DateAdd("d", 1, mydate)
+
+laterDate = DateAdd("yyyy", 2, mydate)
+Debug.Print laterDate
+
+MsgBox DateAdd("h", 1, "31 Dec 2020 12:00:00")
+MsgBox DateAdd("n", 1, "31 Dec 2020 12:00:00")
+MsgBox DateAdd("s", 1, "31 Dec 2020 12:00:00")
+
+End Sub
+
+
+'#83 DATE_PRINT
+Sub Cdate2()
+
+Dim b As Variant 'accepts the variable anything
+b = CDate("20 Dec 2020")
+MsgBox b	'shows date mm/dd/yyyy mode
+
+End Sub
+
+'#84 TIME FUNCTION
+Sub now_time()
+
+MsgBox Now()    'displays current date & time
+MsgBox Time()   'displays only time
+
+MsgBox Hour(Time)   'displays hour
+MsgBox Minute(Time) 'displays minute
+MsgBox Second(Time) 'displays second
+
+MsgBox Hour("3:10:13")    'displays 3
+MsgBox Minute("3:10:13")  'displays 10
+MsgBox Second("3:10:13")  'displays 13
+
+End Sub
+
+
+'# 84 TIME FUNCTION 2
+Sub Time_FuncValue()
+
+Dim MyTime As Date
+
+Debug.Print TimeSerial(3, 4, 5)
+Debug.Print TimeSerial(12, 59, 59)
+
+MyTime = TimeValue("23:51:40")
+Debug.Print MyTime
+
+End Sub
+
+
+'#85 TIME FUNCTION 3
+Sub now_time()
+
+Dim t As Variant
+t = Now()
+
+Debug.Print t		'print in immediate window
+Debug.Print Time()
+Cells(1, 1).Value = Time()
+Range("b1:b2").Value = Time()
+
+End Sub
