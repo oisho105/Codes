@@ -1,0 +1,27 @@
+
+'#59 RESUME NEXT
+Sub resumenext()
+
+On Error Resume Next
+    MsgBox 10
+    MsgBox 10 / 0 'it's runtime error
+    MsgBox 10 + 10
+
+End Sub
+
+
+'#59 2 GoTo RESUME
+Sub resumenext2()
+
+On Error GoTo abc
+    MsgBox 10
+    MsgBox 10 / 0 'it's runtime error
+    MsgBox 10 + 10
+
+Done:
+    Exit Sub
+
+abc:       'a codeblock
+    MsgBox "Error Message Shown"
+
+End Sub
